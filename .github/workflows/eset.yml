@@ -155,6 +155,7 @@ jobs:
               python3 main.py --auto-detect-browser --account --email-api $MAIL --skip-update-check --no-logo --disable-progress-bar --disable-logging --repeat $ACCOUNT
               echo "`nAccount:" | Out-File -FilePath $env:GITHUB_STEP_SUMMARY -Append
               Get-Content -Path ./*ACCOUNTS.txt | Out-File -FilePath $env:GITHUB_STEP_SUMMARY -Append
+        
           }
           elseif ($KEY -ne 0) {
               python3 main.py --auto-detect-browser $KEY_TYPE --email-api $MAIL --skip-update-check --no-logo --disable-progress-bar --disable-logging --repeat $KEY
